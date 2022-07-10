@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "full_block": true,
+  "faces": {
+    "1 0 0": "grass_block_side.png",
+    "-1 0 0": "grass_block_side.png",
+    "0 1 0": "grass_block_top.png",
+    "0 -1 0": "dirt.png",
+    "0 0 1": "grass_block_side.png",
+    "0 0 -1": "grass_block_side.png"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": 10,
+  "full_block": true,
+  "faces": {
+    "1 0 0": "end_stone.png",
+    "-1 0 0": "end_stone.png",
+    "0 1 0": "end_stone.png",
+    "0 -1 0": "end_stone.png",
+    "0 0 1": "end_stone.png",
+    "0 0 -1": "end_stone.png"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": 3,
+  "full_block": true,
+  "faces": {
+    "1 0 0": "planks_oak.png",
+    "-1 0 0": "planks_oak.png",
+    "0 1 0": "planks_oak.png",
+    "0 -1 0": "planks_oak.png",
+    "0 0 1": "planks_oak.png",
+    "0 0 -1": "planks_oak.png"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": 7,
+  "full_block": true,
+  "faces": {
+    "1 0 0": "glass.png",
+    "-1 0 0": "glass.png",
+    "0 1 0": "glass.png",
+    "0 -1 0": "glass.png",
+    "0 0 1": "glass.png",
+    "0 0 -1": "glass.png"
+  }
+}

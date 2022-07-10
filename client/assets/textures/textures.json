@@ -1,0 +1,20 @@
+{
+  "blocks": [
+    "grass",
+    "wood",
+    "dirt",
+    "cobblestone",
+    "brick",
+    "diamond_ore",
+    "glass",
+    "sand",
+    "netherrack",
+    "end_stone"
+  ],
+  "creatures": [
+
+  ],
+  "other": [
+
+  ]
+}
