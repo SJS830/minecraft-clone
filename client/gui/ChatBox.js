@@ -17,7 +17,7 @@ export default class ChatBox {
       position: absolute;
       color: white;
       left: 1.5vh;
-      right: 50%;
+      right: 70%;
       top: 70%;
       bottom: 1.5vh;
     `;

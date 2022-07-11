@@ -59,9 +59,9 @@ export default class LocalPlayer {
   }
 
   raycast() {
-    let step = .01;
+    let step = .005;
 
-    let dir = this.position.rotation.multiplyScalar(step);
+    let dir = this.position.rotation.clone().multiplyScalar(step);
     let pos = Minecraft.getRenderer().camera.position.clone();
     let distance = 0;
 
@@ -95,26 +95,30 @@ export default class LocalPlayer {
         this.gui.highlightedBlock.visible = true;
         this.gui.highlightedBlock.position.copy(pos.clone().floor().addScalar(.5));
 
-        let [x1, y1, z1] = pos.clone().sub(dir).toArray();
-        let [x2, y2, z2] = pos.toArray();
+        let [x, y, z] = pos.toArray();
 
-        x1 %= 1; y1 %= 1; z1 %= 1; x2 %= 1; y2 %= 1; z2 %= 1;
+        //Euclidian modulo
+        x %= 1; y %= 1; z %= 1;
+        x += 1; y += 1; z += 1;
+        x %= 1; y %= 1; z %= 1;
 
-        if (x1 - x2 > step) {
+        if (x < .01 && dir.x > 0) {
           this.targeted.block_face.x = -1;
-        } else if (x2 - x1 > step) {
+        } else if (x > .99 && dir.x < 0) {
           this.targeted.block_face.x = 1;
-        } else if (y1 - y2 > step) {
+        } else if (y < .01 && dir.y > 0) {
           this.targeted.block_face.y = -1;
-        } else if (y2 - y1 > step) {
+        } else if (y > .99 && dir.y < 0) {
           this.targeted.block_face.y = 1;
-        } else if (z1 - z2 > step) {
+        } else if (z < .01 && dir.z > 0) {
           this.targeted.block_face.z = -1;
-        } else if (z2 - z1 > step) {
+        } else if (z > .99 && dir.z < 0) {
           this.targeted.block_face.z = 1;
         } else {
           console.log("?????????????");
         }
+
+        console.log(x, y, z, this.targeted.block_face);
 
         return;
       }

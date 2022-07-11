@@ -52,7 +52,7 @@ export default class HotBar {
         this.slot--;
       }
 
-      updateHighlight();
+      this.updateHighlight();
     });
 
     document.addEventListener("keyup", (event) => {
