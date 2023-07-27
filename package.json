@@ -1,0 +1,22 @@
+{
+  "name": "minecraft-clone",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prettier": "npx prettier . --write"
+  },
+  "devDependencies": {
+    "@types/three": "^0.154.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "nanoevents": "^8.0.0",
+    "three": "^0.154.0"
+  }
+}
